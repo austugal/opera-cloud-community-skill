@@ -18,8 +18,8 @@ Validate frontmatter, routed files, relative links, evidence/source coverage and
 
 | Batch | Research and validation targets | Current boundary |
 |---|---|---|
-| Releases and AI | Services, Distribution, OHIP, Hotel Property Interface, OFIS, native AI and verified partner copilots | Selected 26.4 AI pages reviewed; no tenant test |
-| Integration | REST/OAuth, async, Business Events/streaming, IFC8/OXI/OPI, RMS/CRM/channel managers and payments | Verify each vendor contract, direction, fields, licence and latency separately |
+| Releases and AI | Services, Distribution, OHIP, Hotel Property Interface, OFIS, native AI and verified partner copilots | Selected 26.4 feature summary and Ask Oracle guide reviewed; rate-description AI is limited to early adopters per the guide; no tenant or entitlement test |
+| Integration | REST/OAuth, async, Business Events/streaming, IFC8/OXI/OPI, RMS/CRM/channel managers, payments, and vendor-specific interfaces | Prologic First's public partner list reviewed; its Opera entries do not specify release or interface. Verify each vendor contract, direction, fields, licence, and latency separately |
 | Implementation | Supported migration tools, object exclusions, CSV uploads, Enterprise Management, UAT/cutover/recovery | Selected 26.2 transactional import and Enterprise Management pages reviewed |
 | Portugal | SAF-T, ATCUD/QR, invoice format/retention, fiscal partner workflows and stationery | Existing fiscal reference; recheck applicable authority requirements |
 | Spain | SII, billing-system rules, VERI*FACTU implementation dates, regional rules and guest reporting | Separate enacted requirements from announcements and proposals |
@@ -33,6 +33,9 @@ Each run should record source URLs, reviewed sections, relevant release/country,
 - [Oracle Hospitality documentation](https://docs.oracle.com/en/industries/hospitality/)
 - [Hotels product/release index](https://docs.oracle.com/en/industries/hospitality/hotels.html)
 - [Oracle hospitality API specifications](https://github.com/oracle/hospitality-api-docs)
+- [OPERA Cloud native AI notes](native-ai-and-copilots.md)
+- [Partner integration evidence notes](partner-integrations.md)
+- [Prologic First technology integration partners](https://prologicfirst.com/integration-partners/)
 - [Portugal AT](https://info.portaldasfinancas.gov.pt/) and [Diário da República](https://diariodarepublica.pt/)
 - [Spain AEAT](https://sede.agenciatributaria.gob.es/) and [BOE](https://www.boe.es/)
 - [Australia ATO](https://www.ato.gov.au/)

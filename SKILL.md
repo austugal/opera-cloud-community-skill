@@ -2,7 +2,8 @@
 name: opera-cloud
 description: >-
   Version-aware reference for Oracle Hospitality OPERA Cloud, OPERA 5, and OHIP.
-  Use for any question on OPERA, OHIP, IFC8, OXI, SAF-T, SII, VERI*FACTU, ATCUD, SUN or
+  Use for any question on OPERA, OHIP, IFC8, OXI, Ask Oracle AI, OPERA AI features and copilots,
+  hospitality vendor integrations including Prologic First, SAF-T, SII, VERI*FACTU, ATCUD, SUN or
   back-office exports, night audit, OPERA Controls, rate plans and derivation, channel managers
   and distribution, REST and Distribution APIs, OAuth, Business Events and streaming, hospitality
   PMS configuration and operations, release upgrades, and troubleshooting.
@@ -21,7 +22,7 @@ software that connects to or operates a hotel system.
    release; and whether the question is operational, configuration, integration, or regulatory.
    Establish the installed release first. Properties upgrade on Oracle's schedule and are often
    behind the newest release, so a correct answer for one release can be wrong for another.
-2. Open only the reference file(s) relevant to the question, using the map below.
+2. Open only the reference file(s) or specialist module relevant to the question, using the maps below.
 3. For exact API paths, schemas, permissions, menu paths, controls, and release-specific behavior,
    verify against Oracle's documentation for the customer's deployed release. The references are
    navigation aids, not substitutes for live product specifications.
@@ -42,16 +43,33 @@ software that connects to or operates a hotel system.
 | Distribution APIs, ARI, reservation notifications, channel migration | `references/distribution-channels.md` |
 | IFC8, OXI, and interface configuration | `references/interfaces-ifc8.md` |
 | Fiscal exports, SAF-T, SII, VERI*FACTU, and country-specific considerations (Portugal and Spain detail) | `references/fiscal-compliance.md` |
+| Australia fiscal and GST research boundaries | `references/australia-fiscal.md` |
 | Back-office ledger exports and formula-engine constraints | `references/backoffice-export.md` |
 | Night audit, business dates, and OPERA Controls | `references/night-audit-controls.md` |
 | Rate plans, restrictions, derivation, and hurdle logic | `references/rates-restrictions.md` |
 | HTTP errors, retry behavior, and rate limits | `references/error-handling.md` |
+| Ask Oracle AI Agent, OPERA AI features, and third-party copilots | `references/native-ai-and-copilots.md`; for an AI capability evaluation, also read `subskills/opera-ai-assessment/SKILL.md` |
+| Vendor-listed partner integrations and compatibility evidence | `references/partner-integrations.md`; for a technical assessment, also read `subskills/opera-integration-assessment/SKILL.md` |
 | Release tracking and upgrade checks | `references/version-changes.md` |
 | OPERA 5 configuration | `references/opera5-pms.md` |
 | Workstations, printers, and print tasks | `references/workstation-setup-guide.md` |
+| BI Publisher stationery and RTF/XML validation | `references/bi-publisher-stationery-xml.md` |
 | Mobile configuration and connectivity | `references/mobile-configuration-guide.md` |
 | Support triage and general troubleshooting | `references/support-troubleshooting-guide.md` |
+| Migration, supported imports, implementation, and training | `references/implementation-migration-training.md` |
 | Compact API and operations overview | `references/quick-reference.md` |
+| Repository research and maintenance policy (maintainers only) | `references/maintenance-sources-and-backlog.md` |
+
+## Specialist modules
+
+These original, task-specific playbooks add repeatable analysis workflows to this skill; they are
+not external agent packages and do not access or operate a hotel system. Read one when its task
+matches:
+
+- `subskills/opera-ai-assessment/SKILL.md` for identifying AI products, verifying availability,
+  separating guidance from transactional access, and assessing safeguards.
+- `subskills/opera-integration-assessment/SKILL.md` for vendor claims, interface evidence, data
+  flow, implementation checks, and integration troubleshooting.
 
 ## Product and integration map
 
