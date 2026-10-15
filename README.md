@@ -5,6 +5,22 @@ Hospitality Integration Platform (OHIP). It helps an AI assistant answer product
 configuration, integration, and troubleshooting questions using scoped guidance and an explicit
 source-verification workflow.
 
+**Quick links:** [Install](docs/demo-installation.md#install) ·
+[Try the demo](docs/demo-installation.md#demo) · [Use the skill](SKILL.md) ·
+[Coverage and gaps](maintenance/source-release-coverage.md) ·
+[OXI XML sample guidance](docs/oxi-xml-samples.md)
+
+## Common use cases
+
+- Find release-aware OPERA Cloud, OPERA 5, or OHIP guidance and identify what must be checked
+  against the deployed environment.
+- Assess an integration, interface, or vendor compatibility claim without treating OXI, IFC8,
+  OHIP, or Distribution as interchangeable.
+- Investigate operational, configuration, AI-feature, or fiscal questions using the scoped
+  references and their evidence limits.
+- Discover external OXI XML examples safely; this repository links to a library but does not
+  bundle its XML files.
+
 ## Purpose and architecture
 
 This repository is a documentation product: Markdown files, a `SKILL.md` entry point, and
@@ -29,8 +45,11 @@ operate them.
 
 - **Content:** Markdown, including YAML frontmatter in `SKILL.md`
 - **Runtime/build dependencies:** none
-- **Validation:** manual review of document structure, reference links, and factual claims against
-  authoritative Oracle documentation; there is no code test suite or build command
+- **Validation:** `python tools/validate_repository.py` checks skill frontmatter, reference
+  routing, relative Markdown links, and selected secret patterns. Run
+  `python -m unittest discover -s tests -v` for the validator's unit tests. GitHub Actions runs
+  both commands on pushes and pull requests. These checks do not validate product claims or replace
+  review against authoritative Oracle documentation.
 
 ## Maintenance status
 
@@ -92,6 +111,7 @@ authoritative sources when using release-specific or regulatory guidance.
 | `references/bi-publisher-stationery-xml.md` | BI Publisher stationery, RTF/XML, and validation |
 | `references/implementation-migration-training.md` | Migration, supported imports, implementation, and training |
 | `references/maintenance-sources-and-backlog.md` | Public research policy, source entry points, and rotating coverage backlog |
+| `docs/oxi-xml-samples.md` | OXI XML sample discovery, boundaries, and safe evaluation checklist |
 
 ## Specialist playbooks
 
@@ -121,6 +141,9 @@ They are loaded through the root `SKILL.md` router and do not bundle or copy thi
 Corrections and additions are welcome by pull request. Keep changes public and non-sensitive. Cite
 the relevant Oracle source for factual claims, state the release scope where applicable, and update
 the routing table in `SKILL.md` and this file when adding or renaming a reference.
+
+GitHub Discussions are enabled for questions and suggestions. No posts to external forums or
+communities have been made for this project; no popularity claim is made.
 
 ## License
 
