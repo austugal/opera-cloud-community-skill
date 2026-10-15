@@ -70,6 +70,9 @@ matches:
   separating guidance from transactional access, and assessing safeguards.
 - `subskills/opera-integration-assessment/SKILL.md` for vendor claims, interface evidence, data
   flow, implementation checks, and integration troubleshooting.
+- `subskills/opera-ai-automation-contract/SKILL.md` for converting an operations request into a
+  version-aware, evidence-backed, human-governed AI automation design. It is a planning workflow,
+  not an autonomous hotel agent or an integration that operates OPERA.
 
 ## Product and integration map
 

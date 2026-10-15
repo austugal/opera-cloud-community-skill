@@ -47,9 +47,12 @@ guidance. Oracle documentation can change between scheduled reviews.
 - [Oracle Hospitality Integration Platform documentation](https://docs.oracle.com/en/industries/hospitality/integration-platform/)
 - [Oracle Hospitality documentation home](https://docs.oracle.com/en/industries/hospitality/)
 
-A separate daily ChatGPT task is configured to maintain this repository and the installed skill;
-it runs outside this repository. No GitHub Actions maintenance workflow is bundled here, and a
-schedule does not guarantee that research, publication, or skill persistence succeeded. Re-check
+A weekly Copilot automation named **Weekly OPERA skill review** is enabled in the separate
+`opera-cloud-skill` project, not in this public community repository. Its configured review runs
+outside this repository; the former separate ChatGPT scheduled task and chat were deleted, per the
+repository owner's report. This repository has no bundled GitHub Actions maintenance schedule
+(its Actions workflow validates pushes and pull requests). A scheduled run alone does not prove
+that this public repository was updated or that an installed skill was persisted. Re-check
 authoritative sources when using release-specific or regulatory guidance.
 
 ## Where to start
@@ -99,6 +102,7 @@ They are loaded through the root `SKILL.md` router and do not bundle or copy thi
 |---|---|
 | `subskills/opera-ai-assessment/SKILL.md` | Identify Oracle-native, partner, custom, or proposed AI; verify release and availability; assess data access and safeguards |
 | `subskills/opera-integration-assessment/SKILL.md` | Assess product/vendor compatibility claims, interface evidence, data flow, and implementation risk |
+| `subskills/opera-ai-automation-contract/SKILL.md` | Turn an OPERA/OHIP operations request into a version-aware, safety-gated AI workflow automation contract |
 
 ## Principles
 
