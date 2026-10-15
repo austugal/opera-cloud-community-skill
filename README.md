@@ -15,7 +15,7 @@ The skill uses a small-router / on-demand-reference design:
 
 1. An agent matches a request to the skill's frontmatter description and reads `SKILL.md`.
 2. `SKILL.md` establishes answer and safety rules, explains the product boundaries, and routes the
-   question to one or more focused references.
+   question to focused references or specialist playbooks.
 3. The agent consults the relevant Oracle release documentation and customer-approved procedures
    for exact, environment-specific behavior before recommending an action.
 
@@ -47,8 +47,10 @@ guidance. Oracle documentation can change between scheduled reviews.
 - [Oracle Hospitality Integration Platform documentation](https://docs.oracle.com/en/industries/hospitality/integration-platform/)
 - [Oracle Hospitality documentation home](https://docs.oracle.com/en/industries/hospitality/)
 
-No scheduled update job is bundled with this repository. Re-check authoritative sources when
-using release-specific or regulatory guidance.
+A separate daily ChatGPT task is configured to maintain this repository and the installed skill;
+it runs outside this repository. No GitHub Actions maintenance workflow is bundled here, and a
+schedule does not guarantee that research, publication, or skill persistence succeeded. Re-check
+authoritative sources when using release-specific or regulatory guidance.
 
 ## Where to start
 
@@ -75,12 +77,28 @@ using release-specific or regulatory guidance.
 | `references/night-audit-controls.md` | Night audit, business dates, and OPERA Controls |
 | `references/rates-restrictions.md` | Rate plans, restrictions, derivation, and hurdle logic |
 | `references/error-handling.md` | HTTP errors, retry behavior, and rate limits |
+| `references/native-ai-and-copilots.md` | Ask Oracle AI Agent, selected OPERA Cloud AI features, and third-party assistant evidence |
+| `references/partner-integrations.md` | Vendor-listed integrations, including evidence boundaries for Prologic First |
 | `references/version-changes.md` | Release tracking and upgrade checks |
 | `references/opera5-pms.md` | OPERA 5 configuration topics |
 | `references/workstation-setup-guide.md` | Workstation, printer, and print-task setup |
 | `references/mobile-configuration-guide.md` | OPERA mobile setup and troubleshooting |
 | `references/support-troubleshooting-guide.md` | Support triage and general troubleshooting |
 | `references/quick-reference.md` | Compact API and operations overview |
+| `references/australia-fiscal.md` | Australian fiscal and GST research boundaries |
+| `references/bi-publisher-stationery-xml.md` | BI Publisher stationery, RTF/XML, and validation |
+| `references/implementation-migration-training.md` | Migration, supported imports, implementation, and training |
+| `references/maintenance-sources-and-backlog.md` | Public research policy, source entry points, and rotating coverage backlog |
+
+## Specialist playbooks
+
+The skill includes two original task-specific playbooks inspired by role-based agent workflows.
+They are loaded through the root `SKILL.md` router and do not bundle or copy third-party personas:
+
+| Playbook | Use it for |
+|---|---|
+| `subskills/opera-ai-assessment/SKILL.md` | Identify Oracle-native, partner, custom, or proposed AI; verify release and availability; assess data access and safeguards |
+| `subskills/opera-integration-assessment/SKILL.md` | Assess product/vendor compatibility claims, interface evidence, data flow, and implementation risk |
 
 ## Principles
 
@@ -107,14 +125,14 @@ MIT. See `LICENSE`.
 ## Installation
 
 Install the repository as a skill folder named `opera-cloud` in a supported assistant's skill
-location. Keep `SKILL.md`, `references/`, and `LICENSE` together. Skill discovery and automatic
+location. Keep `SKILL.md`, `references/`, `subskills/`, and `LICENSE` together. Skill discovery and automatic
 invocation depend on the host application; installing here does not configure other accounts,
 applications, or computers.
 
 This public repository starts from a reviewed content snapshot; it does not include the private
-source repository's commit history. This distribution contains the OPERA skill and its technical references. Agency Agents is a
-separate project and is not bundled here. Review-date checks cover selected claims, not every
-procedure in every release.
+source repository's commit history. Agency Agents is a separate project and its personas are not
+bundled here; the specialist playbooks in this repository are original, OPERA-focused workflows.
+Review-date checks cover selected claims, not every procedure in every release.
 
 ### Codex CLI or IDE extension: user installation
 
@@ -145,6 +163,8 @@ structure. A GitHub repository alone does not install a skill into every chat pr
 - Explain which room and rate mappings must be confirmed before a channel-manager migration.
 - Compare the documented Portugal package-control changes in 26.4 with our installed release.
 - Draft a front-office checklist, identifying which steps depend on property configuration.
+- Check which OPERA Cloud AI assistant is documented for our release and whether it can change records.
+- Assess a vendor's published “Opera PMS” integration claim without assuming it means OHIP or OPERA Cloud.
 
 ### Example: Portugal PDF invoices
 
