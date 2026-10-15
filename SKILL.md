@@ -5,8 +5,9 @@ description: >-
   Use for any question on OPERA, OHIP, IFC8, OXI, Ask Oracle AI, OPERA AI features and copilots,
   hospitality vendor integrations including Prologic First, SAF-T, SII, VERI*FACTU, ATCUD, SUN or
   back-office exports, night audit, OPERA Controls, rate plans and derivation, channel managers
-  and distribution, REST and Distribution APIs, OAuth, Business Events and streaming, hospitality
-  PMS configuration and operations, release upgrades, and troubleshooting.
+  and distribution, REST and Distribution APIs, OAuth, Business Events and streaming, OXI XML
+  sample discovery, hospitality PMS configuration and operations, release upgrades, and
+  troubleshooting.
 license: MIT
 ---
 
@@ -42,6 +43,7 @@ software that connects to or operates a hotel system.
 | Async APIs, Business Events, subscriptions, and streaming | `references/async-streaming-events.md` |
 | Distribution APIs, ARI, reservation notifications, channel migration | `references/distribution-channels.md` |
 | IFC8, OXI, and interface configuration | `references/interfaces-ifc8.md` |
+| OXI message XML sample discovery, distinctions, and safe evaluation | `docs/oxi-xml-samples.md` |
 | Fiscal exports, SAF-T, SII, VERI*FACTU, and country-specific considerations (Portugal and Spain detail) | `references/fiscal-compliance.md` |
 | Australia fiscal and GST research boundaries | `references/australia-fiscal.md` |
 | Back-office ledger exports and formula-engine constraints | `references/backoffice-export.md` |
