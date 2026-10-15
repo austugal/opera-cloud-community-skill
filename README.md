@@ -14,12 +14,13 @@ procedures.
 
 **Quick links:** [Install](docs/demo-installation.md#install) ·
 [Try the demo](docs/demo-installation.md#demo) · [Use the skill](SKILL.md) ·
-[Open the live interactive robot demo](https://austugal.github.io/opera-cloud-community-skill/) ·
 [Coverage and gaps](maintenance/source-release-coverage.md) ·
 [OXI XML sample guidance](docs/oxi-xml-samples.md)
 
-The live robot demo opens as an interactive page hosted on GitHub Pages. GitHub's README preview
-does not run interactive HTML or JavaScript, so use the link above to see the robot.
+![An original robot head tracing a hotel facade with rooms and a front entrance](assets/robot-roaming.gif)
+
+GitHub renders this local animation as an image: the robot cannot follow page scrolling or move
+beyond the GIF's image bounds.
 
 ## Common use cases
 
