@@ -112,5 +112,52 @@ invocation depend on the host application; installing here does not configure ot
 applications, or computers.
 
 This public repository starts from a reviewed content snapshot; it does not include the private
-source repository's commit history. The bundled optional agency-agents personas retain their own
-upstream MIT notice. Review-date checks cover selected claims, not every procedure in every release.
+source repository's commit history. This distribution contains the OPERA skill and its technical references. Agency Agents is a
+separate project and is not bundled here. Review-date checks cover selected claims, not every
+procedure in every release.
+
+### Codex CLI or IDE extension: user installation
+
+Run in PowerShell (Git required; Bash and WSL are not needed):
+
+```powershell
+New-Item -ItemType Directory -Force (Join-Path $HOME ".agents/skills") | Out-Null
+git clone https://github.com/austugal/opera-cloud-community-skill.git (Join-Path $HOME ".agents/skills/opera-cloud")
+```
+
+For macOS or Linux:
+
+```sh
+mkdir -p "$HOME/.agents/skills"
+git clone https://github.com/austugal/opera-cloud-community-skill.git "$HOME/.agents/skills/opera-cloud"
+```
+
+If the destination already contains this checkout, update it with `git pull --ff-only` from
+that folder instead of cloning again. Keep any local changes separately. Invoke `$opera-cloud`
+in Codex. Automatic matching uses the skill description; it is not guaranteed on every message.
+[Official OpenAI skill documentation](https://learn.chatgpt.com/docs/build-skills).
+For other assistants, use their documented skill import location and retain the same folder
+structure. A GitHub repository alone does not install a skill into every chat product.
+
+## Example requests
+
+- Use this skill to investigate why a fiscal zero-balance checkout stopped on OPERA Cloud 26.1.
+- Explain which room and rate mappings must be confirmed before a channel-manager migration.
+- Compare the documented Portugal package-control changes in 26.4 with our installed release.
+- Draft a front-office checklist, identifying which steps depend on property configuration.
+
+### Example: Portugal PDF invoices
+
+**Question:** Does the 2026 PDF-invoice acceptance provision mean CIUS-PT becomes mandatory in 2027?
+
+**Answer:** No such conclusion follows from that provision alone. Lei n.º 73-A/2025, article
+95(3), accepts PDF invoices as electronic invoices for fiscal-law purposes through 31 December
+2026. Establishing the requirements after that date requires checking the legislation then in
+force and the taxpayer's scope. This is a documented deadline, not proof of an exclusive replacement
+format. [Primary source: Diário da República](https://diariodarepublica.pt/dr/detalhe/lei/73-a-2025-993270096).
+
+## Publication boundary
+
+No live property data, customer configurations, credentials, guest records or support-case
+attachments are included. Product and authority names identify the systems and public sources;
+they do not imply endorsement or a customer relationship. The copyright holder is `austugal`.
