@@ -160,10 +160,30 @@ Capabilities:
   (see `version-changes.md`).
 - Errors: read the Oracle error response body, not just the HTTP status (see `error-handling.md`).
 
+## Oracle's example reservation workflow
+
+Oracle's public OPERA Cloud [common-workflows guide](https://github.com/oracle/hospitality-api-docs/blob/4bd129b455bc5e3ab0f900ac47983611e58659b4/postman-collections/property/WORKFLOWS.md)
+was reviewed on 2026-10-15 and describes a reservation-search-and-booking sequence. The guide does
+not identify an applicable API release:
+
+1. Search hotel availability and select the returned room type and rate-plan codes.
+2. Retrieve rate-plan information and, as needed, packages, guarantee policies, and payment
+   methods.
+3. Find an existing guest profile or include a new profile in the reservation request.
+4. Create the reservation with `postReservation`; Oracle's guide says the response `Location`
+   header contains the reservation ID.
+5. Use `putReservation` to update the reservation when needed.
+
+This is an example workflow, not a complete specification or compatibility promise. Oracle notes
+that some APIs are v0 Early Adopter APIs. Check the current integration's API contract, release,
+entitlement, and required configuration; do not assume every listed operation is enabled or
+available to every partner.
+
 ## Authoritative references
 
 - [OPERA Cloud Services documentation](https://docs.oracle.com/en/industries/hospitality/hotels.html)
 - [OHIP documentation index](https://docs.oracle.com/en/industries/hospitality/integration-platform/)
+- [Oracle Hospitality APIs: OPERA Cloud common workflows](https://github.com/oracle/hospitality-api-docs/blob/4bd129b455bc5e3ab0f900ac47983611e58659b4/postman-collections/property/WORKFLOWS.md)
 
 Use the release-specific API reference available to the integration in the OHIP Developer Portal
 for request paths, schemas, required headers, entitlements, limits, and deprecations.
