@@ -5,10 +5,17 @@ Hospitality Integration Platform (OHIP). It helps an AI assistant answer product
 configuration, integration, and troubleshooting questions using scoped guidance and an explicit
 source-verification workflow.
 
+This skill is for hotel staff who use AI assistants or skills—especially hotel IT, front office
+managers (FOMs), and operations teams. It is a practical reference and starting point for research
+and troubleshooting, not a replacement for product training, official Oracle documentation, or
+property-specific procedures.
+
 **Quick links:** [Install](docs/demo-installation.md#install) ·
 [Try the demo](docs/demo-installation.md#demo) · [Use the skill](SKILL.md) ·
 [Coverage and gaps](maintenance/source-release-coverage.md) ·
 [OXI XML sample guidance](docs/oxi-xml-samples.md)
+
+![A tiny bug zig-zagging around an OPERA Cloud dashboard](docs/assets/opera-cloud-bug.gif)
 
 ## Common use cases
 
