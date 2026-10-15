@@ -5,20 +5,21 @@ Hospitality Integration Platform (OHIP). It helps an AI assistant answer product
 configuration, integration, and troubleshooting questions using scoped guidance and an explicit
 source-verification workflow.
 
-This skill is for hotel staff who use AI assistants or skills—especially hotel IT, front office
-managers (FOMs), and operations teams. It is a practical reference and starting point for research
-and troubleshooting, not a replacement for product training, official Oracle documentation, or
-property-specific procedures.
+This practical AI-skill reference welcomes anyone working in the OPERA Cloud ecosystem, including
+hotel teams, OPERA Cloud and OPERA 5 specialists, hotel IT, SiteMinder and other channel-management
+integrators, IFC8 specialists, payment integrators, vendors, implementation partners, and other
+ecosystem practitioners. Use it to research, integrate, implement, operate, and troubleshoot OPERA.
+It is not a substitute for official Oracle documentation, product training, or property-specific
+procedures.
 
 **Quick links:** [Install](docs/demo-installation.md#install) ·
 [Try the demo](docs/demo-installation.md#demo) · [Use the skill](SKILL.md) ·
-[Scroll-following robot demo](docs/scrolling-maze-demo.html) ·
+[Open the live interactive robot demo](https://austugal.github.io/opera-cloud-community-skill/) ·
 [Coverage and gaps](maintenance/source-release-coverage.md) ·
 [OXI XML sample guidance](docs/oxi-xml-samples.md)
 
-The robot demo is a standalone HTML file: download it and open it in a browser to try it.
-GitHub's README preview does not run interactive HTML or JavaScript, and this repository does not
-host the demo as a website.
+The live robot demo opens as an interactive page hosted on GitHub Pages. GitHub's README preview
+does not run interactive HTML or JavaScript, so use the link above to see the robot.
 
 ## Common use cases
 
