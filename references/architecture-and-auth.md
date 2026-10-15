@@ -49,9 +49,26 @@ than relying on historical portal labels.
 
 ## Authentication
 
-OAuth 2.0 client credentials are used by OHIP integrations where specified by the integration
-setup. Registration, grant details, token endpoint, scopes, token audience, and credential
-requirements must be confirmed in the current OHIP instructions for that integration.
+Use the grant, endpoint, scope, and credentials assigned for the particular integration. Oracle's
+public [OHIP OAuth specification](https://github.com/oracle/hospitality-api-docs/blob/4bd129b455bc5e3ab0f900ac47983611e58659b4/rest-api-specs/security/v1/publishedoauth.json)
+identifies itself as version 26.2.0.0. This pinned public source was reviewed on 2026-10-15; it
+documents this token-request shape:
+
+- `POST /oauth/v1/tokens` with `application/x-www-form-urlencoded` fields.
+- HTTP Basic authentication with the Client ID and Client Secret, plus the required `x-app-key`
+  header.
+- `grant_type=password` with an OPERA Cloud integration username and password, or
+  `grant_type=client_credentials` with an assigned `scope`.
+- An optional `enterpriseId` header only for client-credentials use with OCIM environments.
+- A JSON token response containing `access_token`, `token_type`, and `expires_in`. The
+  specification describes `token_type` as the type of access token issued (`Bearer`) and says
+  `expires_in` is typically 3600 seconds.
+
+This is the contract in that published 26.2 specification, not proof that every tenant or
+integration uses both grants or the same token configuration. The current public specification's
+version does not establish the deployed OPERA Cloud or OHIP release. Confirm the applicable grant,
+token URL, scope, audience, required headers, and credential provisioning in the integration's
+current OHIP instructions and tenant documentation before implementation.
 
 Conceptual flow:
 
@@ -89,6 +106,7 @@ examples, tickets, source control, or logs.
 
 - [Oracle Hospitality OPERA Cloud Services documentation](https://docs.oracle.com/en/industries/hospitality/hotels.html)
 - [Oracle Hospitality Integration Platform documentation](https://docs.oracle.com/en/industries/hospitality/integration-platform/)
+- [Oracle Hospitality APIs: published OHIP OAuth specification (v26.2.0.0)](https://github.com/oracle/hospitality-api-docs/blob/4bd129b455bc5e3ab0f900ac47983611e58659b4/rest-api-specs/security/v1/publishedoauth.json)
 
 A customer's tenant may run an older version or a different configuration from the newest
 published release.

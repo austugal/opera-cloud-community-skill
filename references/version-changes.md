@@ -66,7 +66,7 @@ transaction went unreported. Verify the actual workflow and fiscal records. The 
 
 These are examples of confirmed changes, not a complete release summary. They come from the
 [26.4 release readiness guide](https://docs.oracle.com/en/industries/hospitality/opera-cloud/26.4/oprnc/c_feature_summary.htm),
-Country Specific section.
+including the Country Specific section.
 
 - **Portugal:** the Advanced Packages OPERA Control is no longer displayed, to avoid issues with the
   `PT_SAFT_104` country export. Oracle's impact note says Advanced Packages functionality is not
@@ -79,8 +79,15 @@ Country Specific section.
   value for the Municipality Code Region OPERA Control (ESP, BAS, or CAT), and grant the Import
   Municipality Code Account Folio task to the relevant role. Scale SMALL.
 
-Only the first part of the 26.4 page was read for this review. Read the full guide before
-planning an upgrade.
+- **Leisure Management:** the 26.4 guide describes Leisure Experiences for eligible OPERA Cloud
+  Services or OPERA Cloud Central Management Services subscriptions. Setup requires configured
+  locations, experience types, resources, pricing, schedules, controls, and role tasks. The guide
+  says experience statuses are generally updated manually, No Show is assigned during End of Day,
+  and an unconfirmed availability hold expires after 30 minutes. This is product workflow evidence,
+  not evidence that a matching OHIP API is available or enabled; verify the API contract separately.
+
+Only selected 26.4 sections were read for this review. Read the full guide before planning an
+upgrade.
 
 ## 26.3 release-note items verified on 2026-10-13
 
