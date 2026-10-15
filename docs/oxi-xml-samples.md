@@ -25,12 +25,11 @@ to the library only; no sample files or copied XML payloads are bundled here.
 
 ## Related OPERA Cloud practice site
 
-[OC Practice](https://opera-cloud-practice.pages.dev/) currently redirects unauthenticated
-visitors to an access page. That page advertises a reference library, Copilot, PIW Builder, SAF-T
-Validator, and IFC8 guides, and describes the project as an independent reference. These are
-publisher descriptions, not independently verified product capabilities or Oracle documentation.
-Its IFC8 guides are a discovery lead only; no setup claims are repeated here without confirmation
-in applicable primary Oracle documentation.
+[OC Practice](https://opera-cloud-practice.pages.dev/) redirected unauthenticated visitors to an
+access page when checked on 2026-10-15. The page advertises a reference library, Copilot, PIW
+Builder, SAF-T Validator, and IFC8 guides. These are publisher descriptions, not independently
+verified product capabilities or Oracle documentation. The IFC8 material is a research lead only;
+no setup claims are repeated here without confirmation in applicable primary Oracle documentation.
 
 The site's materials are reported as CC BY-NC-SA. The public access page does not expose terms that
 let this repository independently verify the license or its scope. In any event, that license is
