@@ -4,16 +4,11 @@ Policy established 2026-10-15. This is an author-maintained public reference, no
 
 ## Recurring workflow
 
-A weekly Copilot automation named **Weekly OPERA skill review** is enabled in the separate
-`opera-cloud-skill` project, not in this public community repository. Its configured prompt is for
-reviewing that separate project's repository and proposing changes by pull request; it runs
-outside this repository. The current automation listing shows the workflow enabled and its latest
-run manually triggered and completed. The former separate ChatGPT scheduled task and chat were
-deleted, per the repository owner's report. This public repository has no bundled GitHub Actions
-maintenance schedule; its workflow runs validation on pushes and pull requests. A scheduled run
-alone does not establish that this public repository was changed, a proposed change was merged, or
-an installed skill was persisted. Verify the exact project, run result, reviewed sources, proposed
-changes and their publication separately.
+Weekly OPERA skill research and maintenance runs through the owner's Copilot automation in the
+owner's Copilot workspace. It is not configured in this public repository and does not publish
+changes here. Changes to this repository are managed through reviewed pull requests. GitHub Actions
+validates repository changes on pushes and pull requests; it does not conduct research. Verify
+review and publication separately.
 
 Review current files, release scope and recent work first. Prioritise corrections and material changes, then add a bounded topic batch. Record what was actually read, its source/release/date and remaining uncertainty. Preserve historical release scope. Do not change a checked date merely because a URL responds. Distinguish newly published material from older documentation newly discovered.
 

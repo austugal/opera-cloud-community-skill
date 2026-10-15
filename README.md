@@ -53,26 +53,23 @@ operate them.
 
 ## Maintenance status
 
-Reviewed on 2026-10-15 against Oracle Help Center indexes. Oracle's Hotels documentation index
-lists OPERA Cloud Services 26.4 and OPERA Cloud Distribution 26.4 as the newest releases, with
-Hotel Property Interface at 8.17. The OHIP documentation was last recorded at 26.3 on 2026-10-13
-and was not re-checked. This is the documentation set visible on the review dates, not a claim that
-every customer runs that release. Properties often run an older one. The applicable release,
-modules, product entitlements, and property configuration must be confirmed before applying any
-guidance. Oracle documentation can change between scheduled reviews.
+Reviewed on 2026-10-15 against Oracle Help Center indexes. The Hotels index listed OPERA Cloud
+Services 26.4, OPERA Cloud Distribution 26.4, and Hotel Property Interface 8.17. OHIP 26.3 was
+last recorded on 2026-10-13 and was not re-checked. These are index observations, not a property
+deployment inventory or verification of every claim in this repository. Confirm the deployed
+release, modules, entitlements, and configuration before applying release-specific guidance.
+Oracle documentation can change between reviews.
 
 - [Oracle Hospitality Hotels documentation index](https://docs.oracle.com/en/industries/hospitality/hotels.html)
 - [OPERA Cloud Services 26.4 release readiness](https://docs.oracle.com/en/industries/hospitality/opera-cloud/26.4/oprnc/c_feature_summary.htm)
 - [Oracle Hospitality Integration Platform documentation](https://docs.oracle.com/en/industries/hospitality/integration-platform/)
 - [Oracle Hospitality documentation home](https://docs.oracle.com/en/industries/hospitality/)
 
-A weekly Copilot automation named **Weekly OPERA skill review** is enabled in the separate
-`opera-cloud-skill` project, not in this public community repository. Its configured review runs
-outside this repository; the former separate ChatGPT scheduled task and chat were deleted, per the
-repository owner's report. This repository has no bundled GitHub Actions maintenance schedule
-(its Actions workflow validates pushes and pull requests). A scheduled run alone does not prove
-that this public repository was updated or that an installed skill was persisted. Re-check
-authoritative sources when using release-specific or regulatory guidance.
+Weekly OPERA skill research and maintenance runs through the owner's Copilot automation in the
+owner's Copilot workspace; it is not configured in this public repository and does not publish
+changes here. Changes to this repository are managed through reviewed pull requests. GitHub Actions
+validates repository changes on pushes and pull requests; it does not conduct research. Review and
+publication are verified separately.
 
 ## Where to start
 
@@ -152,15 +149,9 @@ MIT. See `LICENSE`.
 ## Installation
 
 This is an **unofficial community skill**, not an Oracle product or Oracle-endorsed resource. The
-[demo and installation guide](docs/demo-installation.md) has source-linked sample answers, a FAQ,
-and separate install instructions for Codex and Claude Code based on their current official
-documentation. The instructions install only into the chosen assistant and scope; a GitHub
-repository URL does not configure every assistant, account, or computer.
-
-This public repository starts from a reviewed content snapshot; it does not include the private
-source repository's commit history. Agency Agents is a separate project and its personas are not
-bundled here; the specialist playbooks in this repository are original, OPERA-focused workflows.
-Review-date checks cover selected claims, not every procedure in every release.
+[demo and installation guide](docs/demo-installation.md) provides source-linked examples and
+assistant-specific installation instructions. Install it only in the intended assistant and scope;
+a GitHub repository URL does not configure other assistants, accounts, or computers.
 
 See the [assistant-specific installation guide](docs/demo-installation.md#install).
 
