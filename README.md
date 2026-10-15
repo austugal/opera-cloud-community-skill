@@ -65,11 +65,9 @@ Oracle documentation can change between reviews.
 - [Oracle Hospitality Integration Platform documentation](https://docs.oracle.com/en/industries/hospitality/integration-platform/)
 - [Oracle Hospitality documentation home](https://docs.oracle.com/en/industries/hospitality/)
 
-Weekly OPERA skill research and maintenance runs through the owner's Copilot automation in the
-owner's Copilot workspace; it is not configured in this public repository and does not publish
-changes here. Changes to this repository are managed through reviewed pull requests. GitHub Actions
-validates repository changes on pushes and pull requests; it does not conduct research. Review and
-publication are verified separately.
+The repository owner conducts weekly OPERA skill research and maintenance with Copilot automation.
+Changes to this repository are made through reviewed pull requests; GitHub Actions validates
+changes but does not conduct research. Review and publication are verified separately.
 
 ## Where to start
 
