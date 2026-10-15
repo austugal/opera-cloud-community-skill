@@ -17,7 +17,7 @@ procedures.
 [Coverage and gaps](maintenance/source-release-coverage.md) ·
 [OXI XML sample guidance](docs/oxi-xml-samples.md)
 
-![An original robot head tracing a hotel facade and writing Opera Cloud Skill below it](assets/robot-roaming.gif)
+![An original robot head tracing the hotel facade, then writing OPERA CLOUD SKILL beneath it](assets/robot-roaming.gif)
 
 GitHub renders this local animation as an image: the robot cannot follow page scrolling or move
 beyond the GIF's image bounds.
