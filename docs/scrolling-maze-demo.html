@@ -1,0 +1,274 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="dark">
+  <title>Scroll-following maze robot demo</title>
+  <style>
+    :root {
+      color-scheme: dark;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: #101820;
+      color: #eef4f7;
+      line-height: 1.6;
+      font-synthesis: none;
+      text-rendering: optimizeLegibility;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      background:
+        radial-gradient(ellipse at 12% 4%, #1c3541 0, transparent 35rem),
+        #101820;
+    }
+
+    main {
+      width: min(100% - 3rem, 46rem);
+      margin: 0 auto;
+      padding: 4rem 0 8rem;
+    }
+
+    .eyebrow {
+      color: #72d7cb;
+      font-size: .8rem;
+      font-weight: 700;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+    }
+
+    h1, h2 { line-height: 1.15; }
+    h1 { max-width: 12ch; font-size: clamp(2.6rem, 8vw, 5rem); margin: .4rem 0 1rem; }
+    h2 { font-size: clamp(1.5rem, 4vw, 2rem); }
+    p { max-width: 65ch; color: #c3d0d6; }
+    a { color: #72d7cb; }
+
+    .intro {
+      min-height: 78vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 1rem 0 5rem;
+    }
+
+    .card {
+      min-height: 72vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      border-top: 1px solid #344750;
+      padding: 3rem 0;
+    }
+
+    .scroll-hint {
+      display: inline-flex;
+      align-items: center;
+      gap: .6rem;
+      margin-top: 1rem;
+      color: #72d7cb;
+      font-weight: 650;
+    }
+
+    .scroll-hint::before {
+      content: "";
+      width: .55rem;
+      height: .55rem;
+      border-right: 2px solid currentColor;
+      border-bottom: 2px solid currentColor;
+      transform: rotate(45deg) translateY(-.15rem);
+    }
+
+    .rail {
+      position: fixed;
+      inset: 0 1rem 0 auto;
+      width: 5rem;
+      height: 100dvh;
+      overflow: visible;
+      pointer-events: none;
+    }
+
+    .rail path.track {
+      fill: none;
+      stroke: #38545d;
+      stroke-width: 10;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    .rail path.route {
+      fill: none;
+      stroke: #72d7cb;
+      stroke-width: 2;
+      stroke-dasharray: 3 8;
+      stroke-linecap: round;
+      opacity: .7;
+    }
+
+    .robot {
+      transform-box: view-box;
+      transform-origin: 0 0;
+      transition: transform 120ms linear;
+    }
+
+    .robot-shell { fill: #f3b75d; stroke: #ffe0a2; stroke-width: 2; }
+    .robot-face { fill: #17272d; }
+    .robot-eye { fill: #72d7cb; }
+    .robot-antenna { stroke: #ffe0a2; stroke-width: 3; stroke-linecap: round; }
+
+    .controls {
+      position: fixed;
+      z-index: 1;
+      top: 1rem;
+      right: 1rem;
+      width: min(16rem, calc(100vw - 7rem));
+      padding: .8rem;
+      border: 1px solid #45616a;
+      border-radius: .8rem;
+      background: #15252ddd;
+      box-shadow: 0 .5rem 2rem #0005;
+      backdrop-filter: blur(8px);
+    }
+
+    .controls button {
+      width: 100%;
+      border: 0;
+      border-radius: .45rem;
+      padding: .65rem .8rem;
+      background: #72d7cb;
+      color: #102126;
+      font: inherit;
+      font-weight: 700;
+      cursor: pointer;
+    }
+
+    .controls button:focus-visible {
+      outline: 3px solid #ffe0a2;
+      outline-offset: 3px;
+    }
+
+    .controls p { margin: .5rem 0 0; font-size: .8rem; line-height: 1.4; }
+
+    @media (max-width: 520px) {
+      main { width: calc(100% - 6.5rem); margin-left: 1rem; padding-top: 8rem; }
+      .controls { top: .75rem; right: .75rem; }
+      .rail { right: .35rem; width: 4rem; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after { scroll-behavior: auto !important; }
+      .robot { transition: none; }
+    }
+  </style>
+</head>
+<body>
+  <aside class="controls" aria-label="Robot demo controls">
+    <button id="toggle" type="button">Pause robot</button>
+    <p id="status" aria-live="polite">Scroll down or up to guide the robot through the maze.</p>
+  </aside>
+
+  <svg class="rail" viewBox="0 0 140 760" preserveAspectRatio="none" aria-hidden="true">
+    <path class="track" d="M70 22 V96 H26 V170 H112 V244 H46 V318 H116 V392 H28 V466 H90 V540 H24 V614 H112 V688 H70 V738"/>
+    <path class="route" d="M70 22 V96 H26 V170 H112 V244 H46 V318 H116 V392 H28 V466 H90 V540 H24 V614 H112 V688 H70 V738"/>
+    <g id="robot" class="robot" transform="translate(70 22)">
+      <path class="robot-antenna" d="M0 -14 V-21"/>
+      <circle cx="0" cy="-23" r="3" fill="#72d7cb"/>
+      <rect class="robot-shell" x="-14" y="-12" width="28" height="25" rx="7"/>
+      <rect class="robot-face" x="-10" y="-7" width="20" height="14" rx="4"/>
+      <circle class="robot-eye" cx="-5" cy="0" r="2"/>
+      <circle class="robot-eye" cx="5" cy="0" r="2"/>
+      <path d="M-4 10 H4" stroke="#17272d" stroke-width="2" stroke-linecap="round"/>
+    </g>
+  </svg>
+
+  <main>
+    <header class="intro">
+      <div class="eyebrow">A small interactive experiment</div>
+      <h1>Guide a robot through a maze.</h1>
+      <p>This original little robot follows your page scroll along a winding maze. Scroll down to
+        lead it forward, or scroll up to retrace your path. It only moves in response to your
+        scrolling—there is no autoplay.</p>
+      <p class="scroll-hint">Scroll to get started</p>
+    </header>
+    <section class="card">
+      <div class="eyebrow">01 / Turn</div>
+      <h2>Take the first corner.</h2>
+      <p>The robot's position is tied to the document's scroll progress. It stays beside the
+        reading area, tracing the route as you move through this page.</p>
+    </section>
+    <section class="card">
+      <div class="eyebrow">02 / Explore</div>
+      <h2>Every turn is yours.</h2>
+      <p>There is no timer or score to chase. The maze is a visual path, and your scroll direction
+        decides which way the robot travels.</p>
+    </section>
+    <section class="card">
+      <div class="eyebrow">03 / Pause</div>
+      <h2>Stop whenever you like.</h2>
+      <p>Use the pause control in the corner to stop following scroll. Resume when you're ready;
+        the robot continues from its current place.</p>
+    </section>
+    <section class="card">
+      <div class="eyebrow">04 / Finish</div>
+      <h2>Backtracking works too.</h2>
+      <p>Scroll back up and the robot retraces the maze in reverse. The motion is deliberately
+        simple and stays under your control.</p>
+    </section>
+  </main>
+
+  <script>
+    (() => {
+      const robot = document.getElementById("robot");
+      const route = document.querySelector(".route");
+      const toggle = document.getElementById("toggle");
+      const status = document.getElementById("status");
+      const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+      let paused = reducedMotion.matches;
+      let framePending = false;
+      const routeLength = route.getTotalLength();
+
+      function updateRobot() {
+        framePending = false;
+        if (paused) return;
+        const maxScroll = document.documentElement.scrollHeight - window.innerHeight;
+        const progress = maxScroll > 0 ? Math.min(1, Math.max(0, window.scrollY / maxScroll)) : 0;
+        const point = route.getPointAtLength(routeLength * progress);
+        robot.setAttribute("transform", `translate(${point.x} ${point.y})`);
+      }
+
+      function scheduleUpdate() {
+        if (framePending || paused) return;
+        framePending = true;
+        window.requestAnimationFrame(updateRobot);
+      }
+
+      function updateControl() {
+        toggle.textContent = paused ? "Resume robot" : "Pause robot";
+        if (paused) {
+          status.textContent = reducedMotion.matches
+            ? "Reduced motion is enabled. Resume to opt in to scroll-following movement."
+            : "Robot paused. Resume to follow page scrolling.";
+        } else {
+          status.textContent = "Scroll down or up to guide the robot through the maze.";
+          scheduleUpdate();
+        }
+      }
+
+      toggle.addEventListener("click", () => {
+        paused = !paused;
+        updateControl();
+      });
+      reducedMotion.addEventListener("change", (event) => {
+        if (event.matches) {
+          paused = true;
+          updateControl();
+        }
+      });
+      window.addEventListener("scroll", scheduleUpdate, { passive: true });
+      window.addEventListener("resize", scheduleUpdate);
+      updateControl();
+    })();
+  </script>
+</body>
+</html>

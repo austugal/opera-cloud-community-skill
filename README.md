@@ -12,10 +12,13 @@ property-specific procedures.
 
 **Quick links:** [Install](docs/demo-installation.md#install) ·
 [Try the demo](docs/demo-installation.md#demo) · [Use the skill](SKILL.md) ·
+[Scroll-following robot demo](docs/scrolling-maze-demo.html) ·
 [Coverage and gaps](maintenance/source-release-coverage.md) ·
 [OXI XML sample guidance](docs/oxi-xml-samples.md)
 
-![A tiny bug zig-zagging around an OPERA Cloud dashboard](docs/assets/opera-cloud-bug.gif)
+The robot demo is a standalone HTML file: download it and open it in a browser to try it.
+GitHub's README preview does not run interactive HTML or JavaScript, and this repository does not
+host the demo as a website.
 
 ## Common use cases
 
