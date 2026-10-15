@@ -8,6 +8,11 @@ Reviewed 2026-10-15. The Prologic First page metadata reports a last-modified da
 
 **Evidence: vendor-published partner listing.** The page does not identify the OPERA product generation or release, interface or protocol, data direction, supported objects, availability by region, or whether an entry means OPERA Cloud, OPERA 5, OHIP, or another interface. The listing alone does not establish Oracle certification or current support. Do not infer these details from “Opera (PMS).”
 
+The vendor's linked Web Prol'IFIC and WISH public pages are product overviews, not technical
+integration specifications. The sources reviewed here do not establish a connector's technical
+contract or compatibility. Treat those details as unknown unless Prologic First and Oracle provide
+current technical confirmation for the proposed products and versions.
+
 Oracle's OPERA Cloud Services 26.4 Feature Summary separately lists an OPERA Cloud Central capability titled [“OPERA Cloud Central added with Third-Party PMS Integration capability”](https://docs.oracle.com/en/industries/hospitality/opera-cloud/26.4/oprnc/c_feature_summary.htm#c_34697_opera_cloud_central_added_with_third_party_pms_integration_capability), marked for Central. That entry does not name Prologic First or establish that its listed “Opera (PMS)” connection uses this capability.
 
 The source confirms that Prologic First publicly lists OPERA-related integrations for named products, but is not a technical integration specification. For a deployment, ask Prologic First and Oracle to confirm in writing:
