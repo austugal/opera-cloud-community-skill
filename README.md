@@ -124,41 +124,22 @@ MIT. See `LICENSE`.
 
 ## Installation
 
-Install the repository as a skill folder named `opera-cloud` in a supported assistant's skill
-location. Keep `SKILL.md`, `references/`, `subskills/`, and `LICENSE` together. Skill discovery and automatic
-invocation depend on the host application; installing here does not configure other accounts,
-applications, or computers.
+This is an **unofficial community skill**, not an Oracle product or Oracle-endorsed resource. The
+[demo and installation guide](docs/demo-installation.md) has source-linked sample answers, a FAQ,
+and separate install instructions for Codex and Claude Code based on their current official
+documentation. The instructions install only into the chosen assistant and scope; a GitHub
+repository URL does not configure every assistant, account, or computer.
 
 This public repository starts from a reviewed content snapshot; it does not include the private
 source repository's commit history. Agency Agents is a separate project and its personas are not
 bundled here; the specialist playbooks in this repository are original, OPERA-focused workflows.
 Review-date checks cover selected claims, not every procedure in every release.
 
-### Codex CLI or IDE extension: user installation
-
-Run in PowerShell (Git required; Bash and WSL are not needed):
-
-```powershell
-New-Item -ItemType Directory -Force (Join-Path $HOME ".agents/skills") | Out-Null
-git clone https://github.com/austugal/opera-cloud-community-skill.git (Join-Path $HOME ".agents/skills/opera-cloud")
-```
-
-For macOS or Linux:
-
-```sh
-mkdir -p "$HOME/.agents/skills"
-git clone https://github.com/austugal/opera-cloud-community-skill.git "$HOME/.agents/skills/opera-cloud"
-```
-
-If the destination already contains this checkout, update it with `git pull --ff-only` from
-that folder instead of cloning again. Keep any local changes separately. Invoke `$opera-cloud`
-in Codex. Automatic matching uses the skill description; it is not guaranteed on every message.
-[Official OpenAI skill documentation](https://learn.chatgpt.com/docs/build-skills).
-For other assistants, use their documented skill import location and retain the same folder
-structure. A GitHub repository alone does not install a skill into every chat product.
+See the [assistant-specific installation guide](docs/demo-installation.md#install).
 
 ## Example requests
 
+- Try the [reproducible demo questions and answers](docs/demo-installation.md#demo).
 - Use this skill to investigate why a fiscal zero-balance checkout stopped on OPERA Cloud 26.1.
 - Explain which room and rate mappings must be confirmed before a channel-manager migration.
 - Compare the documented Portugal package-control changes in 26.4 with our installed release.
@@ -166,15 +147,20 @@ structure. A GitHub repository alone does not install a skill into every chat pr
 - Check which OPERA Cloud AI assistant is documented for our release and whether it can change records.
 - Assess a vendor's published “Opera PMS” integration claim without assuming it means OHIP or OPERA Cloud.
 
-### Example: Portugal PDF invoices
+### Example: Ask Oracle AI Agent
 
-**Question:** Does the 2026 PDF-invoice acceptance provision mean CIUS-PT becomes mandatory in 2027?
+**Question:** Is Ask Oracle a transaction agent that can change a reservation, and is it available
+at every property?
 
-**Answer:** No such conclusion follows from that provision alone. Lei n.º 73-A/2025, article
-95(3), accepts PDF invoices as electronic invoices for fiscal-law purposes through 31 December
-2026. Establishing the requirements after that date requires checking the legislation then in
-force and the taxpayer's scope. This is a documented deadline, not proof of an exclusive replacement
-format. [Primary source: Diário da República](https://diariodarepublica.pt/dr/detalhe/lei/73-a-2025-993270096).
+**Answer:** Oracle documents Ask Oracle as natural-language product and how-to guidance that uses
+property, language, and current-screen context. The guide does not establish that it can edit
+reservations, so contextual answers are not evidence of write access. Availability is released
+incrementally and may be delayed; the Ask Oracle property control must be enabled, so availability
+at a particular property is unknown without checking its configuration. When available, a
+response's **Source** action opens related documentation; if Oracle Support requests it, the
+**Message ID** can help investigate an incorrect answer. [Oracle: Using Ask Oracle AI Agent](https://docs.oracle.com/en/industries/hospitality/opera-cloud/26.4/ocsuh/c_getting_started_ask_oracle.htm)
+· [Oracle: prerequisites](https://docs.oracle.com/en/industries/hospitality/opera-cloud/26.4/ocsuh/r_prerequisites_for_getting_started.htm#PrerequisitesUsingAskOracleAIAgent)
+· [Repository AI evidence notes](references/native-ai-and-copilots.md#ask-oracle-workflow).
 
 ## Publication boundary
 
