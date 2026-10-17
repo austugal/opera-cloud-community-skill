@@ -1,6 +1,6 @@
 # Australia: fiscal discovery and validation
 
-Reviewed 2026-10-15. Scope: selected indexed ATO primary-source extracts, not a complete legal review. Direct retrieval of the ATO law pages returned access errors. Oracle's Australia-specific country guide and a tenant were not available for validation. Treat exact configuration as unverified.
+Reviewed 2026-10-15. Scope: selected indexed ATO primary-source extracts, not a complete legal review. Direct retrieval of the ATO law pages returned access errors. An Oracle support-portal article titled "Australia - Oracle Hospitality OPERA Cloud Fiscal Reference Guide" was located on 2026-10-17 (login required); only its headings were seen, covering property configuration, a comp accounting control for deducting inclusive tax from the comp window, ABN, worked comp-window examples and a UDF tax function. Its content has not been captured or validated here, and no tenant was available. Treat exact configuration as unverified.
 
 ## Authority requirements identified
 
