@@ -47,6 +47,50 @@ Partner/integration and customer administration experiences may have different a
 responsibilities. Use current OHIP documentation and the features available to the account rather
 than relying on historical portal labels.
 
+## OHIP onboarding, portal roles and environments (OCIM)
+
+Reviewed 2026-10-17 against the OHIP User Guide (pages marked `Test Release`, publisher months July
+to October 2026). Re-check before relying on a detail for a dated commitment.
+
+**Documented prerequisites.** A hotel needs an OPERA Cloud Foundation SKU ("OHIP is not available
+for hotels using a legacy OPERA Cloud SKU"), its chain onboarded with OHIP, and chain and properties
+on Oracle Cloud Infrastructure, not a legacy data center. Partner subscriptions follow the OCI Cloud
+Account Activation process: provisioning does not begin until the "Action Required: Welcome to New
+Oracle Cloud Service Subscription(s)" email is actioned.
+([Quick Start for Hoteliers](https://docs.oracle.com/en/industries/hospitality/integration-platform/ohipu/t_quick_start_for_hoteliers_uat_ocim.htm),
+[Getting Started for Partners](https://docs.oracle.com/en/industries/hospitality/integration-platform/ohipu/t_getting_started_for_partners.htm))
+
+**Documented portal roles.** OHIPADMIN, OHIPDEVELOPER, OHIPANALYTICS, OHIPENVIRONMENTS, OHIPVIEW and
+DEVELOPERPORTALACCESS (marked for future deprecation). Only chain-level users can hold them, and
+"Developer Portal users do not have the ability to call APIs." OHIPADMIN, OHIPENVIRONMENTS and
+DEVELOPERPORTALACCESS can approve partner connections and streaming applications.
+([Assigning Roles to Users](https://docs.oracle.com/en/industries/hospitality/integration-platform/ohipu/t_assigning_roles_to_users_ocim.htm))
+
+**Documented environment model.** One environment is one chain in one OPERA environment and one
+clientId. Only partners and customers with OPERA Cloud Central can add an environment; the partner
+supplies the customer's Enterprise ID and chain code and the customer approves. Re-adding a removed
+environment needs the same Enterprise ID and chain code. The first hotel call needs a specific hotel
+ID, not the chain ID.
+([Environments (OCIM)](https://docs.oracle.com/en/industries/hospitality/integration-platform/ohipu/t_environments_gateways_and_credentials.htm),
+[Adding an Environment](https://docs.oracle.com/en/industries/hospitality/integration-platform/ohipu/t_adding_an_environment.htm))
+
+**Documented credential behaviour.** On OCIM a client secret is viewable only when issued; a lost
+secret means issuing a new one and updating every integration on that client. Reissuing a legacy
+GUID clientId to the human-readable format introduced in OHIP Portal 25.3.1 also issues a new secret,
+and the old pair stops working. Customers can create several clients per environment; partners have
+one per customer environment.
+([Issuing the Client Secret](https://docs.oracle.com/en/industries/hospitality/integration-platform/ohipu/t_issuing_the_client_secret_ocim.htm),
+[Managing Client Applications](https://docs.oracle.com/en/industries/hospitality/integration-platform/ohipu/t_managing_client_applications_customers_only_ocim.htm))
+
+**Documented controls.** With IP Allow Listing enabled, partner calls from unlisted ranges are
+declined with HTTP 403. Partner sandbox hotel IDs: `SAND01` for the SSD sandbox, `OHIPSB02` for the
+OCIM sandbox. Shared sandboxes can generate Business Events from other partners' activity.
+([Viewing Environment Details](https://docs.oracle.com/en/industries/hospitality/integration-platform/ohipu/t_viewing_environment_details.htm),
+[Quick Start for Partners (Sandbox)](https://docs.oracle.com/en/industries/hospitality/integration-platform/ohipu/t_quick_start_for_partners_using_the_partner_sandbox.htm))
+
+**Author guidance.** Treat secret issue, clientId reissue, environment removal and enabling IP Allow
+Listing as change-window events: list every consumer of the client first.
+
 ## Authentication
 
 Use the grant, endpoint, scope, and credentials assigned for the particular integration. Oracle's
