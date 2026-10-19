@@ -1,7 +1,7 @@
 ---
 name: opera-cloud
 description: >-
-  OPERA Cloud, OPERA 5 and OHIP guidance with Portugal, Spain and Australia fiscal references.
+  OPERA Cloud, OPERA 5 and OHIP guidance with Portugal, Spain, Australia, France and Germany fiscal references.
   Version-aware support for hotel operations, integrations and implementation planning.
   Use for any question on OPERA, OHIP, IFC8, OXI, Ask Oracle AI, OPERA AI features and copilots,
   hospitality vendor integrations including Prologic First, SAF-T, SII, VERI*FACTU, ATCUD, SUN or
@@ -46,7 +46,7 @@ software that connects to or operates a hotel system.
 | Distribution APIs, ARI, reservation notifications, channel migration | `references/distribution-channels.md` |
 | IFC8, OXI, and interface configuration | `references/interfaces-ifc8.md` |
 | OXI message XML sample discovery, distinctions, and safe evaluation | `docs/oxi-xml-samples.md` |
-| Fiscal exports, SAF-T, SII, VERI*FACTU, and country-specific considerations (Portugal and Spain detail) | `references/fiscal-compliance.md` |
+| Fiscal exports, SAF-T, SII, VERI*FACTU, and country-specific considerations (Portugal, Spain, France and Germany; scoped releases) | `references/fiscal-compliance.md` |
 | Australia GST, tax invoices, long-stay discovery and implementation tests | `references/australia-fiscal.md` |
 | Back-office ledger exports and formula-engine constraints | `references/backoffice-export.md` |
 | Roles, task permissions, hubs, property access and upgrade task visibility | `references/roles-and-access.md` |
