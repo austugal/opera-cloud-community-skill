@@ -71,3 +71,17 @@ back-office and training lists are not authoritative substitutes for public rele
 The macro-enabled planning workbook was inspected as archive/XML only; no macros were executed.
 No attachments, workbook cells, project data or binaries from this review were added to the package.
 No new cutover procedure or workbook-specific schema was published. No tenant tests were performed.
+
+## 2026-10-19 expanded country review
+
+Added five routed references: France, Germany, Italy, USA and UK. Retained Portugal, Spain and
+Australia coverage. Sources reviewed include supplied Oracle France DOC6506 (39, 2026-09-28),
+Germany DOC2090 (65, 2026-10-15), Italy DOC1887 (62, 2026-10-07), USA DOC6541 (18, 2026-02-05),
+and UK DOC3023 (17, 2026-09-30). Portal version numbers are document versions, not OPERA releases.
+
+The UK print contains collapsed product sections: included discovery only, with no invented
+configuration. France/USA OCR and Italy Markdown were used to identify topics; OCR-derived code
+and raw images were excluded. New references separate guide-based topic summaries from public
+Oracle 26.4 Custom Charges/R&A and existing 26.3/26.4 verified release notes. No screenshots,
+source PDFs, client checklist, signed URLs, guest records or partner credentials are distributed.
+Exact implementation settings remain subject to deployed-release verification.

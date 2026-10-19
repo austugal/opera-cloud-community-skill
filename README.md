@@ -122,6 +122,22 @@ changes but does not conduct research. Review and publication are verified separ
 | `references/maintenance-sources-and-backlog.md` | Public research policy, source entry points, and rotating coverage backlog |
 | `docs/oxi-xml-samples.md` | OXI XML sample discovery, boundaries, and safe evaluation checklist |
 
+## Country coverage
+
+Portugal and Spain fiscal research; Australia GST and invoice discovery; expanded France,
+Germany, Italy and USA topic references; and UK visitor-levy discovery. Each country reference
+states its source and implementation limits. Coverage does not mean every country's fiscal
+requirements are fully implemented or legally certified. The UK source was printed collapsed,
+so precise Edinburgh/Glasgow configuration remains unverified.
+
+| Coverage | Reference |
+|---|---|
+| France archives, folios, deposits, tourist tax and e-invoice research | `references/france-fiscal.md` |
+| Germany city tax, GoBD, TSE, e-invoice and ESTATISTIK research | `references/germany-fiscal.md` |
+| Italy Alloggiati/ISTAT, custom charges, folios and fiscal integration | `references/italy-fiscal.md` |
+| USA Hawaii, Massachusetts and NYC tax configuration research | `references/usa-fiscal.md` |
+| UK visitor-levy discovery; incomplete configuration source | `references/uk-fiscal.md` |
+
 ## Specialist playbooks
 
 The skill includes two original task-specific playbooks inspired by role-based agent workflows.
@@ -135,7 +151,7 @@ They are loaded through the root `SKILL.md` router and do not bundle or copy thi
 
 ## Principles
 
-- **Public and factual:** cite or link public Oracle sources for factual claims; label observations
+- **Public and factual:** cite Oracle sources and distinguish public release verification from user-supplied guide summaries; label observations
   and hypotheses clearly.
 - **Version-aware:** verify version-specific details against the deployed release rather than
   assuming the latest or a historical reference applies. The review date above records a docs
