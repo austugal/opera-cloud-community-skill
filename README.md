@@ -102,7 +102,7 @@ changes but does not conduct research. Review and publication are verified separ
 | `references/async-streaming-events.md` | Asynchronous APIs, Business Events, streaming, and subscriptions |
 | `references/distribution-channels.md` | Distribution APIs, ARI, reservation notifications, and channel migration |
 | `references/interfaces-ifc8.md` | IFC8, OXI, and interface configuration |
-| `references/fiscal-compliance.md` | Fiscal exports, SAF-T, SII, VERI*FACTU, and Portugal and Spain detail |
+| `references/fiscal-compliance.md` | Fiscal exports, SAF-T, SII, VERI*FACTU, Portugal/Spain detail and scoped France/Germany release notes |
 | `references/backoffice-export.md` | Ledger exports and formula-engine guidance |
 | `references/roles-and-access.md` | Oracle 26.4 roles, tasks, hubs, access scope and upgrade task visibility |
 | `references/night-audit-controls.md` | Night audit, business dates, and OPERA Controls |

@@ -49,3 +49,9 @@ assigning the inventory date as a source-review date.
 - No primary external source was fetched or uploaded while preparing this inventory. Verify the
   deployed product/release and current Oracle/authority/vendor material before relying on a
   release-sensitive, operational, integration, tax, or legal assertion.
+
+## Country additions reviewed 2026-10-19
+
+- `references/fiscal-compliance.md`: public Oracle 26.4 France archive/Grand Total and Spain municipality details; Oracle Cloud 26.3 and OFIS Cloud 26.3 Germany eStatistik. See the source record in that reference. Selected changes only; no full country implementation, legal review or live validation.
+- `references/australia-fiscal.md`: general comp-window inclusive-tax behavior and generate exception verified in public Oracle Cloud 26.3 Comp Accounting controls. Australian country-specific UDF/ABN setup remains unverified.
+- Uploaded source files were reviewed locally but excluded from publication. Low-resolution screenshots, a customer-specific checklist and a restricted support guide were not treated as publishable product specifications. New product assertions above are independently grounded in public Oracle pages.

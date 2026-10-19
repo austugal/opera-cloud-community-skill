@@ -145,3 +145,35 @@ Reference Guides sit behind a My Oracle Support login and were not read for this
 
 National authority material controls legal requirements. Oracle documentation describes product
 functionality, not whether a taxpayer is legally in scope.
+
+## Additional public Oracle country coverage (reviewed 2026-10-19)
+
+The following additions use public Oracle release documentation only. They are selected product changes, not complete country implementations or legal certification. No uploaded support document, customer checklist, screenshot, project note or actual configuration is distributed with this package.
+
+### France — OPERA Cloud 26.4
+
+When Service Types is active, DAILY_ARCHIVE and DAILY_ARCHIVE_DAY include service-type data. ServiceTypeHeader distinguishes goods, services and mixed folios; DocumentLine uses G or S. Unclassified transaction codes count as services; charge-free folios omit these elements. Deposit Folios and their Credit Bills no longer affect Grand Totals. Oracle requires recreation of both archive exports for the changes to apply [C1].
+
+This is scoped to the stated release and country. The supplied screenshot was too low-resolution to verify; no configuration was inferred from it. This section does not establish current French tax rates, certification status or a complete archive configuration.
+
+### Spain — OPERA Cloud 26.4, additional municipality detail
+
+For Country Mode ES, the municipality field appears for profile address country ES/ESP. Oracle says it is optional and does not validate the selection. Profiles show six digits; registration-card formatting depends on the selected region. Updated R&A reports use the new field, falling back to previous behavior when it is absent [C1].
+
+The country controls and import requirement are already described above. A completed implementation checklist is not evidence of a product-wide prerequisite, a successful deployment elsewhere or a current Oracle procedure. No customer checklist or its completion statuses are included here.
+
+### Germany — OPERA Cloud 26.3 and OFIS Cloud 26.3
+
+Oracle's OPERA Cloud 26.3 notes add ESTATISTIK as a fiscal partner. DATA MANAGEMENT is an option on Manage Fiscal Partner, visible only when ESTATISTIK is selected. The ESTATISTIK_STATS command generates the tourism-statistics universal payload. Country mappings use ESTATISTIK_COUNTRY and MC_ESTATISTIK [C2].
+
+The separate OFIS Cloud 26.3 overview says Generic JSON remains the primary German fiscal delivery and ESTATISTIK is an additional delivery. It identifies Country Mode DE, applicable controls, role tasks, fiscal setup, outbound-domain allow-list configuration, country mappings and monthly report validation as configuration topics [C3]. The overview does not supply every operational value; do not invent endpoints, identifiers or mappings.
+
+OPERA Cloud and OFIS Cloud are separate release scopes. These selected facts do not establish a complete German TSE, invoice-delivery, DSFinV-K or city-tax setup. The restricted country guide is not included or reproduced. Exact partner-specific procedures still require the applicable authorised documentation.
+
+### Public Oracle sources
+
+- **[C1] [OPERA Cloud 26.4 Feature Summary](https://docs.oracle.com/en/industries/hospitality/opera-cloud/26.4/oprnc/c_feature_summary.htm)** — France daily archives/Grand Totals and Spain municipality-code sections read 2026-10-19.
+- **[C2] [OPERA Cloud 26.3 Feature Summary](https://docs.oracle.com/en/industries/hospitality/opera-cloud/26.3/oprnc/c_feature_summary.htm)** — Germany eStatistik section read 2026-10-19.
+- **[C3] [OFIS Cloud 26.3: Germany ESTATISTIK configuration overview](https://docs.oracle.com/en/industries/hospitality/opera-fiscal-integration-solution/26.3/ofrrg/c_germany_ofis_cloud_configuration_for_estatistik.htm)** — public overview read 2026-10-19; not a complete setup specification.
+
+No tenant, export, report, partner delivery or authority acceptance was tested. Retain the source release when answering; do not silently generalise these changes to earlier releases or other countries.

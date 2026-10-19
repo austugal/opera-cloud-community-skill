@@ -6,7 +6,7 @@ Reviewed 2026-10-19. This community guide helps a hotel team turn an Australian 
 
 - **Authority guidance:** selected ATO indexed extracts support the limited tax statements below. Direct ATO page retrieval returned HTTP 403; the complete current guidance and exceptions were not inspected. Recheck the linked guidance with the property's finance or tax owner before implementation.
 - **Oracle documentation:** the public OPERA Cloud **26.2** Configuring Generates page was read. It describes general product mechanisms, not a verified Australian configuration. Check the corresponding documentation for the deployed release; do not assume 26.2 behavior applies unchanged to 26.4 or OPERA 5.
-- **Unverified country detail:** an Oracle support article titled "Australia - Oracle Hospitality OPERA Cloud Fiscal Reference Guide" was located on 2026-10-17, but only headings were seen. Its comp-accounting, ABN, worked-example and UDF content has not been validated or reproduced here. No hotel tenant was accessed.
+- **Unverified country detail:** an Oracle support article titled "Australia - Oracle Hospitality OPERA Cloud Fiscal Reference Guide" was located on 2026-10-17, but only headings were seen. Its country-specific ABN, worked-example and UDF content has not been validated or reproduced here. A general comp-window control is independently verified from public 26.3 documentation below. No hotel tenant was accessed.
 - **Author guidance:** the discovery questions, mapping worksheet, test cases and output template below are proposed implementation practices, not statutory requirements or Oracle-certified steps.
 
 ## 1. Establish the property's context
@@ -102,7 +102,7 @@ Return:
 4. The acceptance tests and evidence the team should retain.
 5. Open decisions, responsible owners and next action.
 
-If asked for an exact Australian comp-tax control or UDF, explicitly state that the country guide has not been validated here. Request the applicable authorised documentation or ask the administrator to verify it; do not fabricate instructions. Do not request private guest data or redistribute restricted support content.
+For comp-tax questions, distinguish the publicly verified general control below from Australian legal treatment. For an Australian UDF or other country-specific setup, explicitly state that the country guide has not been validated here. Request the applicable authorised documentation or ask the administrator to verify it; do not fabricate instructions. Do not request private guest data or redistribute restricted support content.
 
 ## Sources and review record
 
@@ -113,3 +113,11 @@ If asked for an exact Australian comp-tax control or UDF, explicitly state that 
 - **[S5] [Oracle OPERA Cloud 26.2: Configuring Generates](https://docs.oracle.com/en/industries/hospitality/opera-cloud/26.2/ocsuh/t_admin_financial_transaction_management_configuring_generates.htm).** Public page read 2026-10-19; no tenant validation. This source version is deliberate and is not a claim about the latest release.
 
 For broader country research and publication boundaries, see [maintenance sources](maintenance-sources-and-backlog.md). Recheck authority and product documentation whenever tax treatment, release or property configuration changes.
+
+## Publicly verified comp-window behavior — OPERA Cloud 26.3
+
+Added 2026-10-19 from the public [OPERA Controls — Comp Accounting](https://docs.oracle.com/en/industries/hospitality/opera-cloud/26.3/ocsuh/c_opera_controls_comp_accounting.htm) page, independently of the uploaded country-guide image.
+
+Oracle documents the property-level control `DEDUCT_INCLUSIVE_TAX_FROM_COMP_WINDOW`. When active, transfers to a comp window exclude associated inclusive tax. Moving the same transaction back to guest billing reposts that tax. Oracle explicitly excludes this behavior when the comp transaction code has an associated generate.
+
+This verifies a general product mechanism in 26.3, not an Australian tax obligation or a recommendation to activate it. No Australian ABN field, UDF formula, worked comp example or country-specific configuration was verified from the low-resolution screenshot. Those details remain unresolved. Do not use this general control as evidence that every Australian comp transaction is tax-exempt.
