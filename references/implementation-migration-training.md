@@ -38,3 +38,17 @@ These are curriculum topics, not claimed Oracle menu sequences or a substitute f
 - [OPERA Cloud 26.2 About Data Import](https://docs.oracle.com/en/industries/hospitality/opera-cloud/26.2/ocsuh/c_system_setup-importing_data.htm), selected requirements and exclusions.
 - [Enterprise Management: Using Data Import](https://docs.oracle.com/en/industries/hospitality/enterprise-management/ecmug/ch_manage_imports.htm).
 - [Oracle Hospitality Hotels documentation](https://docs.oracle.com/en/industries/hospitality/hotels.html), select the deployed-release User Guide for role-specific procedures.
+
+## Training provenance and implementation inputs
+
+The public [25.2 Digital Learning overview](https://docs.oracle.com/en/industries/hospitality/opera-cloud/25.2/ocsuh/c_getting_started_accessing_oracle_hospitality_digital_learning.htm)
+lists learning areas including OPERA Cloud property management/configuration, Identity Management,
+OHIP, OPI, Reporting and Analytics, Distribution and Sales and Event Management. Use the learning
+site's filters and the organisation's entitlement to locate applicable content. This reviewed page
+is **25.2**; it does not verify today's exact course titles, prices, availability or certification status.
+An undated course-name list is not sufficient evidence for those claims.
+
+Do not treat an older cutover guide or a pre-installation workbook as the current import schema.
+Obtain current target-environment templates and release documentation before accepting field names,
+limits or import order. Do not run workbook macros merely to inspect a planning workbook, or
+include populated worksheets, project configuration or embedded automation in a public skill.

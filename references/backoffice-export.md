@@ -89,3 +89,34 @@ use only the literal form documented for that editor.
 
 Use the current release documentation for export setup and the receiving finance system's current
 format specification for mappings and sign conventions.
+
+## Public Generic XML specification and delivery (reviewed 2026-10-19)
+
+The [26.2 Generic XML specification](https://docs.oracle.com/en/industries/hospitality/opera-cloud/26.2/ocsuh/c_generic_xml_back_office_export-specifications.htm)
+describes these five logical file categories; this is not a claim that only five export templates exist:
+
+| File | Documented scope |
+|---|---|
+| REVENUE | Daily revenue and payments |
+| CITY LEDGER | Daily AR/city-ledger transactions |
+| BILLS | Folios generated that day, including voids |
+| CUSTOMERS | Profiles referenced in BILLS |
+| STATISTICS | Room nights, persons, no-shows and cancellations by room class/type and market |
+
+The common root attributes are `date` and `hotel_code`. Dates use `YYYY-MM-DD`; monetary values
+have two decimal places, a decimal point, no thousands separator and an explicit minus sign for
+negative values. Data travels from OPERA Cloud to the receiving ERP/back-office system, not back
+into OPERA. End-of-day generation is usual; past days can also be regenerated manually. These are
+**26.2** specification facts, not independently verified 26.4 field-level compatibility.
+
+The [26.4 creation procedure](https://docs.oracle.com/en/industries/hospitality/opera-cloud/26.4/ocsuh/t_exports_generic_xml_back_office_export.htm)
+uses **Miscellaneous > Exports > General > New From Template**. Oracle says to repeat creation for
+all ten exports and advises leaving predefined templates unchanged except for Delivery Configuration.
+Do not confuse five logical categories with ten configured exports, or redesign a supplied template
+from an unversioned sample.
+
+The [26.4 delivery guide](https://docs.oracle.com/en/industries/hospitality/opera-cloud/26.4/ocsuh/t_exports_managing_export_file_delivery_configuration.htm)
+supports SFTP delivery or File System generation for manual download; the latter retains files for
+30 days. It explicitly warns that PII is unmasked at the SFTP destination. Select an authorised
+receiver and protect access and retention there. HTTPS is listed as unused, not an alternative delivery
+method. Regenerating an export does not establish that importing it twice is safe for the receiver.
