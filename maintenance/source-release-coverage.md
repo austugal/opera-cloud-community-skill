@@ -85,3 +85,11 @@ and raw images were excluded. New references separate guide-based topic summarie
 Oracle 26.4 Custom Charges/R&A and existing 26.3/26.4 verified release notes. No screenshots,
 source PDFs, client checklist, signed URLs, guest records or partner credentials are distributed.
 Exact implementation settings remain subject to deployed-release verification.
+
+## 2026-10-19 UK expanded-source follow-up
+
+The later supplied Markdown for DOC3023 version 17 contains expanded Glasgow, Edinburgh and
+UDF_TAX_FUNC sections, superseding the preceding collapsed-print limitation. Added conditional
+configuration summaries, separate 26.2 stay-date and 26.4 creation-date behaviour, source-example
+arithmetic warnings and acceptance tests. Oracle product facts remain distinct from council
+scheme-date cross-checks. Raw source, signed image URLs and screenshots remain excluded.

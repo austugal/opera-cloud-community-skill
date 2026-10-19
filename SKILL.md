@@ -1,7 +1,7 @@
 ---
 name: opera-cloud
 description: >-
-  OPERA Cloud, OPERA 5 and OHIP guidance with Portugal, Spain, Australia, France, Germany, Italy and USA fiscal references, plus UK discovery guidance.
+  OPERA Cloud, OPERA 5 and OHIP guidance with Portugal, Spain, Australia, France, Germany, Italy and USA fiscal references, plus UK visitor-levy configuration research.
   Version-aware support for hotel operations, integrations and implementation planning.
   Use for any question on OPERA, OHIP, IFC8, OXI, Ask Oracle AI, OPERA AI features and copilots,
   hospitality vendor integrations including Prologic First, SAF-T, SII, VERI*FACTU, ATCUD, SUN or
@@ -52,7 +52,7 @@ software that connects to or operates a hotel system.
 | Germany city tax, GoBD, TSE, e-invoice and ESTATISTIK research | `references/germany-fiscal.md` |
 | Italy Alloggiati/ISTAT, custom charges, folios and fiscal integration | `references/italy-fiscal.md` |
 | USA Hawaii, Massachusetts and NYC tax configuration research | `references/usa-fiscal.md` |
-| UK visitor-levy discovery; incomplete configuration source | `references/uk-fiscal.md` |
+| UK Edinburgh/Glasgow visitor levies, CITY_TAX and staged long-stay tax research | `references/uk-fiscal.md` |
 | Back-office ledger exports and formula-engine constraints | `references/backoffice-export.md` |
 | Roles, task permissions, hubs, property access and upgrade task visibility | `references/roles-and-access.md` |
 | Night audit, business dates, and OPERA Controls | `references/night-audit-controls.md` |
@@ -163,5 +163,5 @@ review-date observations, not assumptions about a property's installed release. 
 generic, link official sources, and remove or qualify details that cannot be verified.
 
 For the expanded country references, distinguish guide-based topic coverage from publicly verified
-release behaviour. UK coverage is discovery-only because the supplied print omitted expanded
-configuration sections. Never represent a topic inventory as a validated production configuration.
+release behaviour. The UK reference includes the subsequently supplied expanded guide and distinguishes
+stay-date from reservation-creation-date controls. Never represent a topic inventory as a validated production configuration.

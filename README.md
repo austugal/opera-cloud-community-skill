@@ -125,10 +125,10 @@ changes but does not conduct research. Review and publication are verified separ
 ## Country coverage
 
 Portugal and Spain fiscal research; Australia GST and invoice discovery; expanded France,
-Germany, Italy and USA topic references; and UK visitor-levy discovery. Each country reference
+Germany, Italy and USA topic references; and UK visitor-levy configuration research. Each country reference
 states its source and implementation limits. Coverage does not mean every country's fiscal
-requirements are fully implemented or legally certified. The UK source was printed collapsed,
-so precise Edinburgh/Glasgow configuration remains unverified.
+requirements are fully implemented or legally certified. The expanded UK reference covers Edinburgh/Glasgow, release-specific date controls and
+source-example inconsistencies; settings still require deployed-release verification.
 
 | Coverage | Reference |
 |---|---|
@@ -136,7 +136,7 @@ so precise Edinburgh/Glasgow configuration remains unverified.
 | Germany city tax, GoBD, TSE, e-invoice and ESTATISTIK research | `references/germany-fiscal.md` |
 | Italy Alloggiati/ISTAT, custom charges, folios and fiscal integration | `references/italy-fiscal.md` |
 | USA Hawaii, Massachusetts and NYC tax configuration research | `references/usa-fiscal.md` |
-| UK visitor-levy discovery; incomplete configuration source | `references/uk-fiscal.md` |
+| UK Edinburgh/Glasgow visitor levies and long-stay tax research | `references/uk-fiscal.md` |
 
 ## Specialist playbooks
 
