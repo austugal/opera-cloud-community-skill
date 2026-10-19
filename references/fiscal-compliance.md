@@ -177,3 +177,14 @@ OPERA Cloud and OFIS Cloud are separate release scopes. These selected facts do 
 - **[C3] [OFIS Cloud 26.3: Germany ESTATISTIK configuration overview](https://docs.oracle.com/en/industries/hospitality/opera-fiscal-integration-solution/26.3/ofrrg/c_germany_ofis_cloud_configuration_for_estatistik.htm)** — public overview read 2026-10-19; not a complete setup specification.
 
 No tenant, export, report, partner delivery or authority acceptance was tested. Retain the source release when answering; do not silently generalise these changes to earlier releases or other countries.
+
+## Expanded country research references
+
+- [Italy](italy-fiscal.md)
+- [France](france-fiscal.md)
+- [Germany](germany-fiscal.md)
+- [Usa](usa-fiscal.md)
+- [Uk](uk-fiscal.md)
+
+Read each source boundary before using guide-based topics. These references add original
+research and acceptance workflows, not raw Oracle support documents or legal certification.

@@ -1,7 +1,7 @@
 ---
 name: opera-cloud
 description: >-
-  OPERA Cloud, OPERA 5 and OHIP guidance with Portugal, Spain, Australia, France and Germany fiscal references.
+  OPERA Cloud, OPERA 5 and OHIP guidance with Portugal, Spain, Australia, France, Germany, Italy and USA fiscal references, plus UK discovery guidance.
   Version-aware support for hotel operations, integrations and implementation planning.
   Use for any question on OPERA, OHIP, IFC8, OXI, Ask Oracle AI, OPERA AI features and copilots,
   hospitality vendor integrations including Prologic First, SAF-T, SII, VERI*FACTU, ATCUD, SUN or
@@ -48,6 +48,11 @@ software that connects to or operates a hotel system.
 | OXI message XML sample discovery, distinctions, and safe evaluation | `docs/oxi-xml-samples.md` |
 | Fiscal exports, SAF-T, SII, VERI*FACTU, and country-specific considerations (Portugal, Spain, France and Germany; scoped releases) | `references/fiscal-compliance.md` |
 | Australia GST, tax invoices, long-stay discovery and implementation tests | `references/australia-fiscal.md` |
+| France archives, folios, deposits, tourist tax and e-invoice research | `references/france-fiscal.md` |
+| Germany city tax, GoBD, TSE, e-invoice and ESTATISTIK research | `references/germany-fiscal.md` |
+| Italy Alloggiati/ISTAT, custom charges, folios and fiscal integration | `references/italy-fiscal.md` |
+| USA Hawaii, Massachusetts and NYC tax configuration research | `references/usa-fiscal.md` |
+| UK visitor-levy discovery; incomplete configuration source | `references/uk-fiscal.md` |
 | Back-office ledger exports and formula-engine constraints | `references/backoffice-export.md` |
 | Roles, task permissions, hubs, property access and upgrade task visibility | `references/roles-and-access.md` |
 | Night audit, business dates, and OPERA Controls | `references/night-audit-controls.md` |
@@ -156,3 +161,7 @@ as the newest releases. The OHIP documentation was last recorded at 26.3 on 2026
 review-date observations, not assumptions about a property's installed release. Review
 `references/version-changes.md` before relying on release-specific statements. Keep the references
 generic, link official sources, and remove or qualify details that cannot be verified.
+
+For the expanded country references, distinguish guide-based topic coverage from publicly verified
+release behaviour. UK coverage is discovery-only because the supplied print omitted expanded
+configuration sections. Never represent a topic inventory as a validated production configuration.
