@@ -55,3 +55,19 @@ assigning the inventory date as a source-review date.
 - `references/fiscal-compliance.md`: public Oracle 26.4 France archive/Grand Total and Spain municipality details; Oracle Cloud 26.3 and OFIS Cloud 26.3 Germany eStatistik. See the source record in that reference. Selected changes only; no full country implementation, legal review or live validation.
 - `references/australia-fiscal.md`: general comp-window inclusive-tax behavior and generate exception verified in public Oracle Cloud 26.3 Comp Accounting controls. Australian country-specific UDF/ABN setup remains unverified.
 - Uploaded source files were reviewed locally but excluded from publication. Low-resolution screenshots, a customer-specific checklist and a restricted support guide were not treated as publishable product specifications. New product assertions above are independently grounded in public Oracle pages.
+
+
+## Attachment-led public-source review — 2026-10-19
+
+Added selected public-source IFC8 8.17.1.0 configuration and legacy-to-REST architecture guidance;
+Generic XML 26.2 file categories/format and 26.4 creation/delivery rules; a historical Hotel Mobile
+1.4 source boundary; and a versioned Digital Learning reference. Sources are linked in each topic.
+The 26.4 Generic XML specification and Digital Learning pages could not be retrieved; their 26.2
+and 25.2 references remain explicitly versioned. No cross-release compatibility is inferred.
+
+Reviewed seven supplied implementation/interface/training documents as research leads. Older IFC8,
+2022 cutover and 2020 mobile instructions are not promoted as current requirements. The unversioned
+back-office and training lists are not authoritative substitutes for public release documentation.
+The macro-enabled planning workbook was inspected as archive/XML only; no macros were executed.
+No attachments, workbook cells, project data or binaries from this review were added to the package.
+No new cutover procedure or workbook-specific schema was published. No tenant tests were performed.

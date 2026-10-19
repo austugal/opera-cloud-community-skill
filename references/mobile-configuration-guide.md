@@ -63,3 +63,11 @@ documented requirement and evidence for the affected release.
 
 Select the mobile user guide, security guide, and compatibility information for the exact product
 and release in the Oracle Help Center.
+
+## Historical Hotel Mobile documentation boundary
+
+Oracle publicly hosts [Hotel Mobile 1.4 installation and configuration, F17752-06](https://docs.oracle.com/cd/F17749_01/doc.14/f17752.pdf),
+dated **June 2020**. Treat it as a release-specific historical reference, not current OPERA Cloud
+mobile installation guidance. Do not copy its old operating-system requirements or deployment
+instructions into a modern Cloud project without current product/release confirmation. The source
+PDF is linked, not redistributed in this package.
