@@ -50,7 +50,7 @@ uses SQL, spreadsheet syntax, or a shared formula dialect.
 - Confirm supported arithmetic operators, literals, conditional syntax, and functions in the
   product documentation and editor for the target release.
 
-### Not supported (will cause problems)
+### Functions requiring verification
 
 - Do not assume `ABS()`, `GREATEST()`, `SIGN()`, or any other function is supported unless the
   applicable formula reference says so. Diagnose rejected expressions from editor validation and
@@ -70,7 +70,7 @@ use only the literal form documented for that editor.
 
 ### Validation reality
 
-- The formula engine validates on save, but a successful save does not prove correct execution.
+- Check when the target editor validates expressions; a successful save does not prove correct execution.
 - Always run a sample export in UAT and inspect the output file against the finance system's
   expected format before promoting.
 
