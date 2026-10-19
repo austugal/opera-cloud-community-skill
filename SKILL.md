@@ -6,7 +6,7 @@ description: >-
   hospitality vendor integrations including Prologic First, SAF-T, SII, VERI*FACTU, ATCUD, SUN or
   back-office exports, night audit, OPERA Controls, rate plans and derivation, channel managers
   and distribution, REST and Distribution APIs, OAuth, Business Events and streaming, OXI XML
-  sample discovery, hospitality PMS configuration and operations, release upgrades, and
+  sample discovery, Australia GST and tax invoices, hospitality PMS configuration and operations, release upgrades, and
   troubleshooting.
 license: MIT
 ---
@@ -45,7 +45,7 @@ software that connects to or operates a hotel system.
 | IFC8, OXI, and interface configuration | `references/interfaces-ifc8.md` |
 | OXI message XML sample discovery, distinctions, and safe evaluation | `docs/oxi-xml-samples.md` |
 | Fiscal exports, SAF-T, SII, VERI*FACTU, and country-specific considerations (Portugal and Spain detail) | `references/fiscal-compliance.md` |
-| Australia fiscal and GST research boundaries | `references/australia-fiscal.md` |
+| Australia GST, tax invoices, long-stay discovery and implementation tests | `references/australia-fiscal.md` |
 | Back-office ledger exports and formula-engine constraints | `references/backoffice-export.md` |
 | Night audit, business dates, and OPERA Controls | `references/night-audit-controls.md` |
 | Rate plans, restrictions, derivation, and hurdle logic | `references/rates-restrictions.md` |

@@ -15,7 +15,8 @@ procedures.
 **Quick links:** [Install](docs/demo-installation.md#install) ·
 [Try the demo](docs/demo-installation.md#demo) · [Use the skill](SKILL.md) ·
 [Coverage and gaps](maintenance/source-release-coverage.md) ·
-[OXI XML sample guidance](docs/oxi-xml-samples.md)
+[OXI XML sample guidance](docs/oxi-xml-samples.md) ·
+[Australian GST implementation guide](references/australia-fiscal.md)
 
 ![An original robot head tracing the hotel facade, then writing OPERA CLOUD SKILL beneath it](assets/robot-roaming.gif)
 
@@ -114,7 +115,7 @@ changes but does not conduct research. Review and publication are verified separ
 | `references/mobile-configuration-guide.md` | OPERA mobile setup and troubleshooting |
 | `references/support-troubleshooting-guide.md` | Support triage and general troubleshooting |
 | `references/quick-reference.md` | Compact API and operations overview |
-| `references/australia-fiscal.md` | Australian fiscal and GST research boundaries |
+| `references/australia-fiscal.md` | Australian GST examples, invoice discovery, configuration mapping and acceptance tests |
 | `references/bi-publisher-stationery-xml.md` | BI Publisher stationery, RTF/XML, and validation |
 | `references/implementation-migration-training.md` | Migration, supported imports, implementation, and training |
 | `references/maintenance-sources-and-backlog.md` | Public research policy, source entry points, and rotating coverage backlog |
