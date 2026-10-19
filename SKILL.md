@@ -49,6 +49,7 @@ software that connects to or operates a hotel system.
 | Fiscal exports, SAF-T, SII, VERI*FACTU, and country-specific considerations (Portugal and Spain detail) | `references/fiscal-compliance.md` |
 | Australia GST, tax invoices, long-stay discovery and implementation tests | `references/australia-fiscal.md` |
 | Back-office ledger exports and formula-engine constraints | `references/backoffice-export.md` |
+| Roles, task permissions, hubs, property access and upgrade task visibility | `references/roles-and-access.md` |
 | Night audit, business dates, and OPERA Controls | `references/night-audit-controls.md` |
 | Rate plans, restrictions, derivation, and hurdle logic | `references/rates-restrictions.md` |
 | HTTP errors, retry behavior, and rate limits | `references/error-handling.md` |
