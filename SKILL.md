@@ -1,12 +1,14 @@
 ---
 name: opera-cloud
 description: >-
-  Version-aware reference for Oracle Hospitality OPERA Cloud, OPERA 5, and OHIP.
+  OPERA Cloud, OPERA 5 and OHIP guidance with Portugal, Spain and Australia fiscal references.
+  Version-aware support for hotel operations, integrations and implementation planning.
   Use for any question on OPERA, OHIP, IFC8, OXI, Ask Oracle AI, OPERA AI features and copilots,
   hospitality vendor integrations including Prologic First, SAF-T, SII, VERI*FACTU, ATCUD, SUN or
   back-office exports, night audit, OPERA Controls, rate plans and derivation, channel managers
   and distribution, REST and Distribution APIs, OAuth, Business Events and streaming, OXI XML
-  sample discovery, Australia GST and tax invoices, hospitality PMS configuration and operations, release upgrades, and
+  sample discovery, Australia GST and tax invoices, hospitality PMS configuration and operations,
+  release upgrades and
   troubleshooting.
 license: MIT
 ---
